@@ -23,22 +23,21 @@ function setup() {
 
 function draw() {
     image(video, 0, 0, 500, 400);
-    if (rightWristscore > 0.2) {
+    if (rightWristscore > 0.1) {
         harrypottersong.stop()
         fill('blue')
         stroke('blue')
-        circle(rightWristx, rightWristy, 10);
+        circle(rightWristx, rightWristy, 50);
+        document.getElementById('songName').innerHTML = ': Believer';
         believersong.play();
         believersong.setVolume(1);
         believersong.rate(1)
-        document.getElementById('songName').innerHTML = ': Believer';
-
     }
-    if (lefttWristscore > 0.2) {
+    if (lefttWristscore > 0.1) {
         believersong.stop()
         fill('red')
         stroke('red')
-        circle(lefttWristx, leftWristy, 10);
+        circle(leftWristx, leftWristy, 50);
         harrypottersong.play();
         harrypottersong.setVolume(1);
         harrypottersong.rate(1);
@@ -64,11 +63,6 @@ function gotResults(results) {
     }
 }
 
-function play() {
-    harrypottersong.play();
-    harrypottersong.setVolume(1);
-    harrypottersong.rate(1)
-}
 function stop(){
     harrypottersong.stop();
     believersong.stop();

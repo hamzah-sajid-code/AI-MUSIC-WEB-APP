@@ -171,3 +171,7 @@ canvas{
     91%{
          border:10px solid rgb(255,0,127);}
 }
+.playButton{
+    float: left;
+    width: 100px;
+}

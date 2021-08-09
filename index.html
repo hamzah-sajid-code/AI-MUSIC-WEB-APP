@@ -11,9 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
     <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.sound.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.sound.min.js"></script>
 
 </head>
 <body background="bg.jpg">
@@ -25,7 +26,8 @@
             Keep at least 2 feet distance from the webcam, so that your wrist is detected quickly
         </span>
   	</h3>
-
+      <button class="btn btn-success playButton" onclick="play()"><i class="fa fa-play" aria-hidden="true"></i> Play</button>
+      <button class="btn btn-danger playButton" onclick="stop()"><i class="fa fa-stop" aria-hidden="true"></i> Stop</button>
 	<br><br>
     <center>
     <button class="btn btn-info" style="color: white; width: 200px;">Song Name<span class="songName"></span></button>

@@ -25,13 +25,13 @@ function draw() {
     image(video, 0, 0, 500, 400);
     if (rightWristscore > 0.2) {
         harrypottersong.stop()
-
         fill('blue')
         stroke('blue')
         circle(rightWristx, rightWristy, 10);
         believersong.play();
         believersong.setVolume(1);
         believersong.rate(1)
+        document.getElementById('songName').innerHTML = ': Believer';
 
     }
     if (lefttWristscore > 0.2) {
@@ -41,7 +41,8 @@ function draw() {
         circle(lefttWristx, leftWristy, 10);
         harrypottersong.play();
         harrypottersong.setVolume(1);
-        harrypottersong.rate(1)
+        harrypottersong.rate(1);
+        document.getElementById('songName').innerHTML = ": Harry Potter - Hedwig's Theme";
 
     }
 }

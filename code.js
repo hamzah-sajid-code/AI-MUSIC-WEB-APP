@@ -1,11 +1,17 @@
+var rightWristx = '';
+var rightWristy = '';
+var leftWristx  = '';
+var leftWristy  = '';
 function preload(){
-
+    // harrypottersong = loadSound('harrypottersong.mp3');
+    // believersong = loadSound('believersong.mp3');
 }
 
 function setup(){
-    canvas =  createCanvas(600, 500);
-	canvas.center();
+    canvas =  createCanvas(500, 400);
+	canvas.position(433, 150);
     video = createCapture(VIDEO);
+    video.size(500, 400);
     video.hide();
     console.log('ML5 Successfully Loaded: '+ml5.version);
     classifire = ml5.poseNet(video, modelLoaded)
@@ -13,7 +19,7 @@ function setup(){
 }
 
 function draw(){
-    image(video, 0, 0, 600,500);
+    image(video, 0, 0, 500, 400);
 }
 function modelLoaded(){
     console.log('Successfully loaded posnet');
@@ -21,5 +27,10 @@ function modelLoaded(){
 function gotResults(results){
     if(results.length > 0){
         console.log(results);
+        rightWristx = results[0].pose.rightWrist.x;
+        rightWristy = results[0].pose.rightWrist.y;
+        leftWristx = results[0].pose.leftWrist.x;
+        leftWristy = results[0].pose.leftWrist.y;
+
     }
 }
